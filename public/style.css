@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    color: #212b36;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    background-color: #F4F6F8;
+}
+
+.box {
+  margin-top: 30px
+}
+
+form > p {
+    text-align: center;
+    font-weight: 800;
+}
+
+form > ul {
+  padding-left: 0;
+}
+
+form li {
+  color: red;
+  list-style-type: none;
+}
+
+#bvn-form {
+  box-shadow: 0 2px 16px 0 rgba(33, 43, 54, 0.2), 0 31px 41px 0 rgba(33, 43, 54, 0.08);
+  padding: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+label {
+  margin: 10px 0
+}
+
+.form-input {
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+.btn {
+  background-color:#576ae6;
+  font-size: 18px;
+  padding: 14px 16px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.71;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-family: inherit;
+  outline: none;
+  box-shadow: 1px 1px 3px 0 rgba(50, 50, 54, 0.13), 0 0 3px 1px rgba(63, 63, 68, 0.05);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  padding: 14px 16px;
+  font-size: 18px;
+  line-height: 1.43;
+  color: inherit;
+  background-clip: padding-box;
+  border: 1px solid #c4cdd5;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 0 rgba(22, 29, 37, 0.05);
+  transition: border-color ease-in-out .3s, box-shadow ease-in-out .3s;
+  font-family: inherit;
+}
+
+btn:hover {
+  background-color: #2038d6;
+}
+
+
+
+@media screen and (max-width:750px) {
+    
+}

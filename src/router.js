@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import SplitPay from "./components/SplitPay.vue";
 import Verify from "./components/Verify.vue";
-// import BvnForm from "./components/BvnForm.vue";
+import Home from "./views/Home.vue";
 
 Vue.use(Router);
 
@@ -12,6 +12,11 @@ const router = new Router({
   routes: [
     {
       path: "/",
+      name: "Home",
+      component: Home
+    },
+    {
+      path: "/verify",
       name: "Verify",
       component: Verify
     },

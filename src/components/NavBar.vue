@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
       <div id="right-nav">
-        <h1>RentIt</h1>
+        <h1>Rave-Up!</h1>
         <div class="menu-icon">
           <i class="fa" :class="{'fa-bars':!isOpen, 'fa-times':isOpen }" @click="showNavLinks()">
           </i>
@@ -9,19 +9,8 @@
       </div>
       <div id="center-nav" :style="{display: isBlock}">
       	<router-link to="/">Home</router-link> 
-      	<router-link to="/houses">Property</router-link>
-      	<router-link to="/services">Services</router-link>
-      	<router-link to="/about">About</router-link>
-      	<router-link to="/contact">Contact</router-link>
-      </div>
-      <div id="left-nav" :style="{display: isBlock}">
-        <div v-if="!isAdmin" class="flex">
-          <router-link to="/login">Log In</router-link>
-          <button><router-link to="/dashboard"> Post a property</router-link></button>
-        </div>
-        <div v-else>
-          <button @click="logout()">Logout</button>
-        </div>
+      	<router-link to="/verify">BVN Verification</router-link>
+      	<router-link to="/split-pay">Split Payment Demo</router-link>
       </div>
     </div>
 </template>
@@ -77,7 +66,7 @@ export default {
 <style scoped>
     
 #nav {
-  background-color: #354A5F;
+  background-color: #1e223f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,7 +78,6 @@ a {
   text-decoration: none;
   color: white;
   padding: 10px;
-
 }
 
 h1 {

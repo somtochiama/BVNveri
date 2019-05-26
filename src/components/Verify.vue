@@ -1,9 +1,9 @@
 <template>
   <div class="box">
-    <modal v-if="showModal" @close="showModal = false" >
+    <modal v-show="showModal" @close="showModal = false" >
         <template v-slot:body>
             <div class="img-box">
-              <img :src="check" alt="symbol">
+              <img ref="verifyIcon" :src="checked" alt="symbol">
             </div>
             <div v-if="message">{{message}}</div>
         </template>
@@ -29,7 +29,8 @@
 
 <script>
 import axios from "axios";
-import Modal from "./Modal.vue"
+import Modal from "./Modal.vue";
+import checked from "@/assets/icons/checked.svg"
 export default {
   name: "Verify",
   data() {
@@ -37,7 +38,8 @@ export default {
       bvn: null,
       errors: [],
       showModal: false,
-      check: null
+      checked: null,
+      message: null,
     };
   },
   methods: {
@@ -73,16 +75,19 @@ export default {
           console.log(response, response.data)
           if (response.data.status == "success") {
             console.log(response);
-            this.check = "../assets/icons/checked.svg"
+            this.checked = checked;
+            // this.$refs.verifyIcon.src = "../assets/icons/checked.svg"
+            // console.log(this.$ref.verifyIcon.src)
+            console.log(this.$refs)
             this.message = "Your customer is verified!"
           } else {
-            this.check = "../assets/icons/unchecked.svg"
+            this.checked = "../assets/icons/unchecked.svg"
             this.message = "Unfortunately, Your customer isn't verified."
           }
           this.showModal = true 
         })
         .catch(err => {
-          console.log(err.response.data);
+          console.log(err);
           this.errors.push(err.response.data.message)
         });
       }
@@ -97,5 +102,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.img-box {
+  width: 100px;
+  height: 100px;
+  margin: auto
+}
+
+.modal-header, .modal-header {
+  text-align: center
+}
 
 </style>

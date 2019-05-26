@@ -92,6 +92,8 @@ btn:hover {
 
 
 
-@media screen and (max-width:750px) {
-    
+@media screen and (max-width:700px) {
+    #bvn-form {
+      max-width: 80%
+    }
 }

@@ -25,17 +25,19 @@ export default {
     .container {
         display: flex;
         flex-direction: column;
-    }
-
-    .container h2 {
-        text-align: center;
+        padding-left: 2em;
     }
 
     ul {
-        width: 60%;
-        margin: auto;
+        padding-left: 20px;
     }
 
+    ul , 
+    .container h2 {
+        width: 70%;
+        margin: auto
+    }
+    
     .img-container {
         width: 70%;
         margin: auto

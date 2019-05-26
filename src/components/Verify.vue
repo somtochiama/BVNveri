@@ -64,7 +64,6 @@ export default {
         this.showModal = true
         let bvn = this.bvn;
         let url = `https://ravesandboxapi.flutterwave.com/v2/kyc/bvn/${bvn}`;
-        console.log(bvn, url);
         axios({
           url,
           method: "GET",
@@ -76,13 +75,8 @@ export default {
           }
         })
         .then(response => {
-          console.log(response, response.data)
           if (response.data.status == "success") {
-            console.log(response);
             this.checked = checked;
-            // this.$refs.verifyIcon.src = "../assets/icons/checked.svg"
-            // console.log(this.$ref.verifyIcon.src)
-            console.log(this.$refs)
             this.message = "BVN Validation Successfully!"
           } else {
             this.checked = "../assets/icons/unchecked.svg"

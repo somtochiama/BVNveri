@@ -51,8 +51,6 @@ const aVue = {
             }
         },
         payWithRave() {
-            console.log(router)            
-            console.log("here", process.env.VUE_APP_API_PUBKEY);
             const validate = this.validateForm();
             if (validate) {
 
@@ -103,7 +101,7 @@ const aVue = {
             }
         },
         paymentDetails() {
-            console.log("here")
+            ("here")
             axios({
                 method: "POST",
                 url: "https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/v2/verify",

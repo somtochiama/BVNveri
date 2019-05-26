@@ -22,7 +22,6 @@ export default {
   
   data() {
     return {
-      isAdmin: false,
       isOpen: false,
       isBlock: null
     }
@@ -34,31 +33,6 @@ export default {
       this.isBlock = this.isBlock ? null : 'flex'
     },
 
-    logout() {
-      console.log("Logging out")
-      localStorage.removeItem("token")
-      this.$router.push("/login")
-    }
-  },
-
-  watch: {
-    $route(to, from) {
-      console.log("changing!")
-      this.isOpen = false
-      this.isBlock = null
-      if (to.matched.some(record => record.meta.requiresAuth)) {
-        this.isAdmin = true;
-      } else {
-        this.isAdmin = false
-      }
-    }
-  },
-
-  mouted() {
-    console.log(this.$route)
-    if(this.$route.name == "Dashboard") {
-      this.isAdmin = true
-    }
   }
 }
 </script>

@@ -4,7 +4,7 @@
             <div class="img-box">
                 <img src="../assets/icons/credit-cards-payment.svg" alt="credit-cards-payment.svg" >
             </div>
-            <p class="banner-text">The RAveUp website lets you validate the bvn of customers easily and gives you a demo payment fot=r split accounts when making submissions.</p>
+            <p class="banner-text">The RaveUp website lets you validate the bvn of customers easily and gives you a demo payment for split accounts when making submissions.</p>
             <div class="buttons">
                 <button class="btn mb">
                     <router-link to="/verify">BVN Verification</router-link>

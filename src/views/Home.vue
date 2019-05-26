@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <div class="banner">
+            <div class="img-box">
+                <img src="../assets/icons/credit-cards-payment.svg" alt="credit-cards-payment.svg" >
+            </div>
             <p class="banner-text">Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. </p>
             <div class="buttons">
                 <button class="btn mb">
@@ -22,14 +25,11 @@ export default {
 
 <style scoped>
 
-.container {
-    display: flex;
-    background: #1e223f;
-    height: 90vh;
-    color: white;
-    justify-content: center;
-    align-items: center;
+.img-box {
+    width: 50%;
+    margin: auto;
 }
+
 
 .banner {
     width: 60%;
@@ -68,6 +68,10 @@ button > a {
 
     .mb {
         margin-bottom: 10px
+    }
+
+    .img-box {
+        width: 70%
     }
 }
 

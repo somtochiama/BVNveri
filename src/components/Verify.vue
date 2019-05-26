@@ -29,6 +29,7 @@
 
 <script>
 import axios from "axios";
+import loading from "@/assets/icons/loading.gif"
 import Modal from "./Modal.vue";
 import checked from "@/assets/icons/checked.svg"
 export default {
@@ -58,6 +59,9 @@ export default {
     verifyBvn() {
       const validate = this.validateForm();
       if (validate) {
+        this.message = null
+        this.checked = loading
+        this.showModal = true
         let bvn = this.bvn;
         let url = `https://ravesandboxapi.flutterwave.com/v2/kyc/bvn/${bvn}`;
         console.log(bvn, url);
@@ -109,7 +113,8 @@ export default {
   margin: auto
 }
 
-.modal-header, .modal-header {
+.modal-header, 
+.modal-body {
   text-align: center
 }
 

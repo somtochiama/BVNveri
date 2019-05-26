@@ -112,12 +112,13 @@ h1 {
   }
 
   #nav {
-    flex-direction: column
+    flex-direction: column,
   }
 
   #center-nav,#left-nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   #center-nav, #left-nav {

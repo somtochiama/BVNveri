@@ -1,7 +1,7 @@
 <template>
     <div class="box">
         <section class="form-box">
-            <form id="bvn-form" @submit.prevent="paymentDetails">
+            <form id="bvn-form" @submit.prevent="payWithRave">
                 <ul v-if="errors.length">
                     <li v-for="error in errors">* {{ error }}</li>
                 </ul>

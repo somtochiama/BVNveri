@@ -11,8 +11,22 @@ body {
     background-color: #F4F6F8;
 }
 
+img {
+  height: auto;
+  width: 100%
+}
+
 .box {
   margin-top: 30px
+}
+
+.container {
+  display: flex;
+  background: #1e223f;
+  height: 90vh;
+  color: white;
+  justify-content: center;
+  padding-top: 20px;;
 }
 
 form > p {

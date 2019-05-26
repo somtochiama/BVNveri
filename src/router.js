@@ -3,6 +3,7 @@ import Router from "vue-router";
 import SplitPay from "./components/SplitPay.vue";
 import Verify from "./components/Verify.vue";
 import Home from "./views/Home.vue";
+import Demo from "./views/Demo.vue";
 
 Vue.use(Router);
 
@@ -14,6 +15,11 @@ const router = new Router({
       path: "/",
       name: "Home",
       component: Home
+    },
+    {
+      path: " /demo",
+      name: "Demo",
+      component: Demo
     },
     {
       path: "/verify",

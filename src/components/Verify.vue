@@ -83,7 +83,7 @@ export default {
             // this.$refs.verifyIcon.src = "../assets/icons/checked.svg"
             // console.log(this.$ref.verifyIcon.src)
             console.log(this.$refs)
-            this.message = "Your customer is verified!"
+            this.message = "BVN Validation Successfully!"
           } else {
             this.checked = "../assets/icons/unchecked.svg"
             this.message = "Unfortunately, Your customer isn't verified."

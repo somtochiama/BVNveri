@@ -79,7 +79,7 @@ const aVue = {
                     onclose: function() {
                         // router.push("/split-pay")
                         // x.close()
-                        location.reload()
+                        router.push("/demo")                        
                     },
                     callback: function(response) {
                         var txref = response.tx.txRef; // collect flwRef returned and pass to a server page to complete status check.
@@ -90,8 +90,8 @@ const aVue = {
                         ) {
                             // redirect to a success page
                             // alert('success')
-                            aVue.txref = txref
-                            console.log(aVue.txref, aVue,"MAdd") 
+                            // this.$router.push("/demo")
+                            aVue.txref = txref 
                             // router.go()
                         } else {
                             // redirect to a failure page.
@@ -100,7 +100,6 @@ const aVue = {
                         // x.close(); // use this to close the modal immediately after payment.
                     }
                 });
-                this.paymentDetails()
             }
         },
         paymentDetails() {

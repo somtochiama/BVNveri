@@ -112,7 +112,7 @@ h1 {
   }
 
   #nav {
-    flex-direction: column,
+    flex-direction: column;
   }
 
   #center-nav,#left-nav {
